@@ -1,9 +1,9 @@
 package com.gatesunder.game.neighborhood;
 
-import com.gatesunder.game.neighborhood.Direction;
+import com.gatesunder.game.neighborhood.IDirection;
 
 public enum VonNeumanDirection
-	implements Direction
+	implements IDirection
 {
 	NORTH	(0),
 	EAST	(1),

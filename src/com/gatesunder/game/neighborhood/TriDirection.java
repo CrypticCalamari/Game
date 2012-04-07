@@ -1,9 +1,9 @@
 package com.gatesunder.game.neighborhood;
 
-import com.gatesunder.game.neighborhood.Direction;
+import com.gatesunder.game.neighborhood.IDirection;
 
 public enum TriDirection
-	implements Direction
+	implements IDirection
 {
 	LEFT	(0),
 	RIGHT	(1),

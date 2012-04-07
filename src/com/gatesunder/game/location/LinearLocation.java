@@ -1,9 +1,9 @@
 package com.gatesunder.game.location;
 
-import com.gatesunder.game.location.Location;
+import com.gatesunder.game.location.ILocation;
 
 public class LinearLocation
-	implements Location
+	implements ILocation
 {
 	private int x;
 

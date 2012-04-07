@@ -1,23 +1,22 @@
 package com.gatesunder.game.neighborhood;
 
-import com.gatesunder.game.Cell;
-import com.gatesunder.game.neighborhood.Direction;
+import com.gatesunder.game.neighborhood.INeighbor;
+import com.gatesunder.game.neighborhood.IDirection;
 
 ///////////////////////////////////////////////////////////////////////////////
 ///////			BEGIN: Class			///////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
-public class Neighborhood <D extends Direction>
+public class Neighborhood <D extends IDirection>
 {
 	//	Variables	-----------------------------------------------------------
-	private Cell[] neighbors = new Cell[ D.size() ];
-
+	private INeighbor[] neighbors = new INeighbor[ D.size() ];
 
 	//	Methods	---------------------------------------------------------------
-	public Cell getNeighbor( Direction direction )
+	public INeighbor getNeighbor( IDirection direction )
 	{
 		return neighbor[ direction.value() ];
 	}
-	public Neighborhood setNeighbor(Direction direction, Cell neighbor)
+	public Neighborhood setNeighbor(IDirection direction, INeighbor neighbor)
 	{
 		neighbors[ direction.value() ] = neighbor;
 		return this;

@@ -1,9 +1,9 @@
 package com.gatesunder.game;
 
-import com.gatesunder.game.location.Location;
+import com.gatesunder.game.location.ILocation;
 
 public class Rectangular3DLocation
-	implements Location
+	implements ILocation
 {
 	private int x;
 	private int y;

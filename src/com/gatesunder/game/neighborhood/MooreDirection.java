@@ -1,9 +1,9 @@
 package com.gatesunder.game.neighborhood;
 
-import com.gatesunder.game.neighborhood.Direction;
+import com.gatesunder.game.neighborhood.IDirection;
 
 public enum MooreDirection
-	implements Direction
+	implements IDirection
 {
 	NORTH_WEST	(0),
 	NORTH		(1),

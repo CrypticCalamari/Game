@@ -1,31 +1,32 @@
 package com.gatesunder.game.location;
 
-import com.gatesunder.game.location.Location;
+import com.gatesunder.game.location.ILocation;
 
 import java.util.Iterator;
 
 public class GenericLocation
-	implements Location, Iterable<Integer>
+	implements ILocation, Iterable<Integer>
 {
-	private Integer[] coordinates;
+	private int[] coordinates;
 
-	public GenericLocation(Integer... coordinates)
+	public GenericLocation(int... coordinates)
 	{
 		this.coordinates = coordinates;
 	}
 
-	public int get(int i) {return coordinates[i].intValue();}
+	public int get(int i) {return coordinates[i];}
 	public int size() {return coordinates.length;}
 
-	public class GenericLocationIterator implements Iterator<Integer>
+	public class GenericLocationIterator
+		implements Iterator<Integer>
 	{
 		private int i = 0;
-		private Integer[] coor = coordinates;
+		private int[] coor = coordinates;
 		public boolean hasNext()
 		{
 			return (i < coor.length - 1);
 		}
-		public Integer next() {return coor[i++];}
+		public Integer next() {return Integer.valueOf(coor[i++]);}
 		public void remove() {}
 	}
 
@@ -34,16 +35,16 @@ public class GenericLocation
 	public int hashCode()
 	{
 		int h = 0;
-		for (Integer i: coordinates)
-			h = 31*h + i.intValue();
+		for (int i: coordinates)
+			h = 31*h + i;
 
 		return h;
 	}
 	public boolean equals( Object obj )
 	{
-		Iterator<Integer> it = obj.iterator();
-		for (Integer i: coordinates)
-			if (!i.equals(it.next()))
+		Iterator<Integer> it = ((GenericLocation)obj).iterator();
+		for (int i: coordinates)
+			if (!Integer.valueOf(i).equals(it.next()))
 				return false;
 		return true;
 	}

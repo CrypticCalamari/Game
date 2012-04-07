@@ -1,6 +1,6 @@
 package com.gatesunder.game.location;
 
-public interface Location
+public interface ILocation
 {
 	
 }

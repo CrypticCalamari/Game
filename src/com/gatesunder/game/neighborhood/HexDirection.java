@@ -1,9 +1,9 @@
 package com.gatesunder.game.neighborhood;
 
-import com.gatesunder.game.neighborhood.Direction;
+import com.gatesunder.game.neighborhood.IDirection;
 
 public enum HexDirection
-	implements Direction
+	implements IDirection
 {
 	UP			(0),
 	RIGHT_UP	(1),
