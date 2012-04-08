@@ -1,3 +1,6 @@
 package com.gatesunder.game;
 
-public interface ICellType {}
+public interface IRule
+{
+	
+}
